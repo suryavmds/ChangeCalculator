@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChangeCalculator.MainPage"
+             Title="Change Calculator">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Input for Price -->
+            <Label Text="Enter the price of the item:" />
+            <Entry x:Name="PriceEntry" Keyboard="Numeric" Placeholder="e.g., 19.99" />
+
+            <!-- Input for Amount Paid -->
+            <Label Text="Enter the amount paid by the customer:" />
+            <Entry x:Name="AmountPaidEntry" Keyboard="Numeric" Placeholder="e.g., 50.00" />
+
+            <!-- Calculate Button -->
+            <Button Text="Calculate Change" Clicked="OnCalculateClicked" />
+
+            <!-- Display Change Denominations -->
+            <Label Text="Change Denominations:" FontAttributes="Bold" />
+            <CollectionView x:Name="ChangeDenominationsView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding}" FontSize="Medium" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
