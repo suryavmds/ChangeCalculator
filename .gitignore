@@ -1,0 +1,38 @@
+# Ignore build and output directories
+bin/
+obj/
+
+# Ignore user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.ide
+
+# Ignore NuGet packages and cache
+.nuget/
+packages/
+NuGet.exe
+nuget.config
+*.nupkg
+
+# Ignore local development files
+.localhistory/
+*.swp
+*.swo
+
+# Ignore Android-specific files
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Ignore macOS-specific files
+.DS_Store
+._*
+
+# Ignore IDE-specific files
+.idea/
+*.iml
